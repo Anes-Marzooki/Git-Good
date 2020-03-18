@@ -155,3 +155,11 @@ git branch -m [name-of-branch] [new-name]
 ```
 
 ...
+
+## Resources! :fire:
+
+- [Simple Guide](https://rogerdudler.github.io/git-guide/). :closed_book:
+- [Git Immersion](http://gitimmersion.com/).
+- [Git Branching Online](https://learngitbranching.js.org/) :herb:
+- [Git cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) .
+
