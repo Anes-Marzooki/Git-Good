@@ -1,5 +1,10 @@
-# Git-Good
-Git is an essential tool for every developer. It can be daunting at first for the beginners :dizzy:, so practicing it is a top priority.
+
+![alt text][logo]
+
+[logo]: https://git-scm.com/images/logos/downloads/Git-Logo-1788C.png
+
+
+**Git** is an essential tool for every developer. It can be daunting at first for the beginners :dizzy: so practicing it is a top priority.
 
 In this document, you'll find the essential commands to help you out when working on your sprints.
 
@@ -8,7 +13,7 @@ Think of it as a cheat sheet :ledger:, grab this readme or open it in a new tab 
 I encourage you to fork this repo, and to use it as a practice dummy.
 <br>
 ## Bootstrap And Configuration :rocket:
-Before you do anything, you need to configure the User imformation for you local work.
+Before you do anything, you need to configure the User information for your local work.
 - **setting the user name**
 ```
 git config --global user.name "name"
@@ -19,24 +24,24 @@ git config --global user.email "email"
 ```
 ## Working With A Repository
 
-Much of the times you'll be working with an existing repository that you need to fork and download locally on your machine.
+Much of the time you'll be working with an existing repository that you need to fork and download locally on your machine.
 ```
 git clone "link"
 ```
 This will download a "copy" form the existing repository to your machine, with all of its files, commits and branches.
-> If you wish to create your own repository, use [ git init ] to make your local directory a git repo ready to be pushed to github :sparkles:
+> If you wish to create your own repository, use `git init` to make your local directory a git repo ready to be pushed to github :sparkles:
 
->by default the name of the remote will be `origin` if not specified.
+> By default the name of the remote will be `origin` if not specified.
 
 - **Pull && Push** :point_down: :point_up:
 
-This part deals with synching the remote repository with you local one.
+This part deals with synching the remote repository with your local one.
 
-Say that you've successfuly clone a repo from github, and you've been working on it hard just to realise that the owner of the repo just made an update and/or added a new file to the repo :angry:. 
+Say that you've successfully clone a repo from github, and you've been working on it hard just to realize that the owner of the repo just made an update and/or added a new file to the repo :angry:. 
 
 Should you Fork and Clone again ? No !
 
-If you've cloned the repo onto your machine, runnig `git remote -v` will give you the name and the *link* of the original repo from where you cloned. Nice eyh ?
+If you've cloned the repo onto your machine, running `git remote -v` will give you the name and the *link* of the original repo from where you cloned. Nice eyh ?
 
 So all you need to do is to run the `pull` command.
 
@@ -50,7 +55,7 @@ To update your local repo with the changes made in the remote one you just run:
 ```
 git pull origin master
 ```
-> Notice that we used `origin master` to specify the remote and the branch from wich we need the updates.
+> Notice that we used `origin master` to specify the remote and the branch from which we need the updates.
 
 - **Push** :airplane:
 
@@ -77,7 +82,7 @@ I push all of my work now to the `myremote` remote in the `master` branch.
 ```
 git add [file-name]
 ```
-The above command will prepare your file to be staged. It's like saving the **changes** you've made in your file **NOT** the file itself. The command `git add` graps a *snapshot* of the file :camera:.
+The above command will prepare your file to be staged. It's like saving the **changes** you've made in your file **NOT** the file itself. The command `git add` grabs a *snapshot* of the file :camera:.
 ``` 
 git add file-one
 git add file -two
@@ -97,7 +102,7 @@ Alright, now repeat this mantra at least twice a day:
 
 The `commit` command works on the snapshots taking by the `add` command.
 ```
-git commit -m "meaningfull message describing the changes"
+git commit -m "meaningful message describing the changes"
 ```
 This command will save your *staged* changes.
 
@@ -105,4 +110,48 @@ Here if you run `git status`, it's going to tell you that your working directory
 
 Congratulation ! :tada: `git commit` has made a permanent snapshot of your **entire** repository !!!
 
-> Try `git log` now, and see the outputed message :wink:
+> Try `git log` now, and see the output message :wink:
+
+## Branches :herb:
+
+Branches are ... branches of your working tree, that holds your commits. You've already seen the `master` branch, and you've always been working on the same branch.
+
+A branch, allows you to isolate some snapshots and commits from the original code. So the act of *Branching* allows you to work on the same code without changing the original code (if that makes sense).
+
+Let's take an example of how branching works:
+
+We have a repo initialized with a `master` branch that has the original code. Now person1 wants to work on that code but he commits to the `master`, then the original work is lost. So person1 creates a new branch, he calls it `person1`, so now the repo holds two branches: `master` that has the original code and `person1` that holds person1 modification of `master`.
+
+`git branch` will list to you the branch existing in your file.
+> The branch that you are working on will have an asterisk sign `*` in front of it.
+
+- **Creates A New Branch**
+
+`git branch [name-of-branch]` will create a new brach.
+
+- **Switching Branches**
+
+To switch from branch to another, use `git checkout [name-of-branch]`.
+> If you don't know what branch are you looking for run `git branch`
+
+:no_entry: `checkout` will jump you to the specified branch and **updates your directory** ! Make sure that your working directory is clean (snapshots saved) because otherwise, you'll lose any changes that weren't committed.
+
+- **Delete Branches**
+
+To delete a branch just use the `-d` option followed by the branch's name
+```
+$ git branch
+person1
+*master
+$ git branch -d person1
+$git branch
+*master
+```
+- **Rename A Branch**
+
+To rename a branch, use the `-m` option or `--move`.
+```
+git branch -m [name-of-branch] [new-name]
+```
+
+...
