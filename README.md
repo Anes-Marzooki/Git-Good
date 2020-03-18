@@ -47,7 +47,7 @@ So all you need to do is to run the `pull` command.
 
 A typical example of this is what follows:
 ```
-git remote -v
+$ git remote -v
 origin https://github.com/orginization/exercice01.git
 
 ```
@@ -65,7 +65,7 @@ Comes in the `push` command, running it will upload all of your commits and bran
 
 So first make sure you have the link of the desired repo you want to upload to :
 ```
-git remote -v
+$ git remote -v
 origin https://github.com/orginization/exercice01.git
 myremote https://github.com/myname/exercice01.git
 ```
