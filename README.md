@@ -113,25 +113,28 @@ Congratulation ! :tada: `git commit` has made a permanent snapshot of your **ent
 > Try `git log` now, and see the output message :wink:
 
 ## Branches :herb:
+![alt text][branches]
 
+[branches]: https://cdn9.dissolve.com/p/D984_45_897/D984_45_897_1200.jpg
 Branches are ... branches of your working tree, that holds your commits. You've already seen the `master` branch, and you've always been working on the same branch.
 
 A branch, allows you to isolate some snapshots and commits from the original code. So the act of *Branching* allows you to work on the same code without changing the original code (if that makes sense).
 
 Let's take an example of how branching works:
 
-We have a repo initialized with a `master` branch that has the original code. Now person1 wants to work on that code but he commits to the `master`, then the original work is lost. So person1 creates a new branch, he calls it `person1`, so now the repo holds two branches: `master` that has the original code and `person1` that holds person1 modification of `master`.
+We have a repo initialized with a `master` branch that has the original code. Now Chris, wants to work on that code but accidentally in a hurry, he commits to the `master`, the original work is lost and poor Chris got fired :(  CHRIS WHAT HAVE YOU DONE !!!
+To avoid Chris' mistake, we just have to create a new branch before we start our work, we call it something original like `test`, so now the repo holds two branches: `master` that has the original code and `test` our own branch, that holds our modification of `master`.
 
 `git branch` will list to you the branch existing in your file.
 > The branch that you are working on will have an asterisk sign `*` in front of it.
 
-- **Creates A New Branch**
+- **Create A New Branch**
 
-`git branch [name-of-branch]` will create a new brach.
+`git branch [name-of-branch]` will create a new branch.
 
 - **Switching Branches**
 
-To switch from branch to another, use `git checkout [name-of-branch]`.
+To switch from branch to branch like a professional spider monkey, use `git checkout [name-of-branch]`.
 > If you don't know what branch are you looking for run `git branch`
 
 :no_entry: `checkout` will jump you to the specified branch and **updates your directory** ! Make sure that your working directory is clean (snapshots saved) because otherwise, you'll lose any changes that weren't committed.
