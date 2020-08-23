@@ -16,11 +16,11 @@ I encourage you to fork this repo, and to use it as a practice dummy.
 Before you do anything, you need to configure the User information for your local work.
 - **setting the user name**
 ```
-git config --global user.name "name"
+git config --global user.name "your_name"
 ```
 - **setting the user email**
 ```
-git config --global user.email "email"
+git config --global user.email "your_email"
 ```
 ## Working With A Repository
 
@@ -35,15 +35,15 @@ This will download a "copy" form the existing repository to your machine, with a
 
 - **Pull && Push** :point_down: :point_up:
 
-This part deals with synching the remote repository with your local one.
+This part deals with synching the remote repository(from Github) with your local one(on your machine).
 
 Say that you've successfully clone a repo from github, and you've been working on it hard just to realize that the owner of the repo just made an update and/or added a new file to the repo :angry:. 
 
-Should you Fork and Clone again ? No !
+Should you Fork and Clone again ? HELL No !
 
-If you've cloned the repo onto your machine, running `git remote -v` will give you the name and the *link* of the original repo from where you cloned. Nice eyh ?
+If you've cloned the repo onto your machine, running `git remote -v` in the terminal will give you the name and the *link* of the original repo from where you cloned. Nice eyh ?
 
-So all you need to do is to run the `pull` command.
+So all you need to do is to run the `pull` command and VOILA!
 
 A typical example of this is what follows:
 ```
@@ -59,7 +59,7 @@ git pull origin master
 
 - **Push** :airplane:
 
-Alright, you finished your work you save everything and now you need to show the world what good of a job you did.
+Alright, you finished your work, you saved everything and now you need to show the world what good of a job you did.
 
 Comes in the `push` command, running it will upload all of your commits and branches to Github, preferably your own account.
 
@@ -82,13 +82,13 @@ I push all of my work now to the `myremote` remote in the `master` branch.
 ```
 git add [file-name]
 ```
-The above command will prepare your file to be staged. It's like saving the **changes** you've made in your file **NOT** the file itself. The command `git add` grabs a *snapshot* of the file :camera:.
+The above command will prepare your file to be staged. It's like saving the **changes** you've made in your file **NOT** the file itself. The command `git add` grabs a *snapshot* of the file :camera:. Think of it as a camera that takes sanpshots of the changes you've made.
 ``` 
 git add file-one
 git add file -two
 ...
 ```
-To snapshot all the changes you've made on all the files in the current directory, use the `.` argument instead.
+To snapshot all of the changes you've made on all the files in the current directory, use the `.` argument instead.
 
 Just use `git add .` instead of adding your files one by one manually.
 
@@ -100,9 +100,9 @@ Alright, now repeat this mantra at least twice a day:
 
 > git, is a version-control system and Github is the platform for hosting git repositories.
 
-The `commit` command works on the snapshots taking by the `add` command.
+The `commit` command works on the snapshots taked by the `add` command.
 ```
-git commit -m "meaningful message describing the changes"
+git commit -m "meaningful_message_describing_the_changes"
 ```
 This command will save your *staged* changes.
 
